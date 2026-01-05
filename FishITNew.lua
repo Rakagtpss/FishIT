@@ -52,7 +52,7 @@ _G.SellSettings = {
 }
 
 -- Args Lemparan
-local fishArgs = { -1.115296483039856, 0, 1763651451.636425 }
+local fishArgs = { -1.115296493039856, 0, 1763651451.636425 }
 
 -- =====================================================
 -- 🛡️ FISHING BLOCKER (ANTI-FAIL SYSTEM)
@@ -88,7 +88,7 @@ local function startFishingHyperLoop()
     end
 
     pcall(function() CancelInput:InvokeServer() end)
-    task.wait(0.05)
+    task.wait(0.005)
 
     while getgenv().fishingStart do
         task.spawn(function() 
@@ -840,3 +840,4 @@ BtnLoad.MouseButton1Click:Connect(function()
         Notify("Gagal", "Belum ada posisi yang disimpan ")
     end 
 end)
+
